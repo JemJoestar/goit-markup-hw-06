@@ -89,49 +89,51 @@ h6 {
   display: flex;
   align-items: center;
 }
+.block {
+  display: block;
+}
 /**
  ** |============================
  ** | Animations
  ** |============================
 */
 @keyframes move-b-to-t {
-  0%{
+  0% {
     opacity: 0;
-    transform: translatey(100px)
+    transform: translatey(100px);
   }
-  50%{
+  50% {
     opacity: 0.8;
     transform: translatey(-50px);
   }
 
-  100%{
+  100% {
     opacity: 1;
     transform: translatey(0);
   }
 }
 @keyframes drugs {
-  0%{
+  0% {
     background-color: red;
-  } 
-  17%{
+  }
+  17% {
     background-color: orange;
-  } 
-  34%{
+  }
+  34% {
     background-color: yellow;
   }
-  51%{
+  51% {
     background-color: green;
   }
-  68%{
+  68% {
     background-color: lightskyblue;
   }
-  85%{
+  85% {
     background-color: blue;
   }
-  100%{
+  100% {
     background-color: purple;
   }
-
 }
 @keyframes tracking-in-expand {
   0% {
@@ -145,7 +147,6 @@ h6 {
     opacity: 1;
   }
 }
-
 
 /**
  ** |============================
@@ -204,10 +205,9 @@ h6 {
   transform-origin: 50%; /* ? Початок скейлу */
   transition: background-color 250ms var(--primary-cubic-bezier);
 }
-.navigation-link-item.current::after{
+.navigation-link-item.current::after {
   background-color: var(--secondary-brand-color);
   transform: translateY(0) scaleX(1);
-
 }
 .navigation-links {
 }
@@ -311,8 +311,6 @@ h6 {
   margin: 0 auto;
   margin-bottom: 48px;
   color: #ffffff;
-
-  
 }
 
 .hero-button {
@@ -360,13 +358,15 @@ h6 {
  ** | Modal
  ** |============================
 */
+/* ^ Modal bg */
 .modal-bg.is-hidden {
   visibility: hidden;
   opacity: 0;
-  transition: opacity 250ms var(--primary-cubic-bezier), visibility 250ms var(--primary-cubic-bezier) 250ms;
+  transition: opacity 250ms var(--primary-cubic-bezier),
+    visibility 250ms var(--primary-cubic-bezier) 250ms;
 }
 .modal-bg {
-  position: fixed; 
+  position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -376,29 +376,31 @@ h6 {
   backdrop-filter: blur(3px);
   visibility: visible;
   opacity: 1;
-  transition: opacity 250ms var(--primary-cubic-bezier), visibility 250ms var(--primary-cubic-bezier)  ;
+  transition: opacity 250ms var(--primary-cubic-bezier),
+    visibility 250ms var(--primary-cubic-bezier);
   perspective: 600px;
-  
 }
 .modal-bg.is-hidden .modal-frame {
-  transform:  translate(-50%, -50%) rotateY(90deg);
+  transform: translate(-50%, -50%) rotateY(90deg);
   transition: transform 250ms var(--primary-cubic-bezier);
 }
+/* ^ Frame */
 .modal-frame {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 408px;
   min-height: 576px;
+  padding: 72px 24px 24px 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform:  translate(-50%, -50%) rotateY(0);
+  transform: translate(-50%, -50%) rotateY(0);
   transition: transform 250ms var(--primary-cubic-bezier) 100ms;
 }
 .modal-close-btn {
-  position: absolute;  
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,14 +414,71 @@ h6 {
   fill: var(--main-title-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  
-  transition: fill 250ms var(--primary-cubic-bezier), background-color 250ms var(--primary-cubic-bezier);
+
+  transition: fill 250ms var(--primary-cubic-bezier),
+    background-color 250ms var(--primary-cubic-bezier);
 }
-.modal-close-btn:hover{
+.modal-close-btn:hover {
   background-color: var(--secondary-brand-color);
   fill: #ffffff;
 }
+/* ^Form */
+.form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.modal-form {
+  width: 360px;
+}
 
+.modal-form-text {
+  border: 1px solid var(--main-title-color);
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+}
+.modal-input-title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.modal-form-icon {
+  fill: var(--main-title-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(35%) translateX(16px);
+}
+.modal-form-text:focus + .modal-form-icon {
+  fill: var(--primaty-brand-color);
+}
+.modal-form-input-box {
+  position: relative;
+}
+.modal-form-text:focus {
+  border-color: var(--primaty-brand-color);
+  outline: none;
+}
+.modal-form-textarea {
+  resize: none;
+}
+.modal-form-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #2e2f42;
+  border-radius: 50px;
+}
+.privacy-text {
+  text-decoration-line: underline;
+  color: #4d5ae5;
+}
 /**
  ** |============================
  ** | Skills
@@ -596,7 +655,7 @@ h6 {
  **|============================
 */
 .portfolio {
-  padding-top: 100px ;
+  padding-top: 100px;
   padding-bottom: 120px;
 }
 /* *portfolio buttons */
@@ -682,7 +741,7 @@ h6 {
 .portfolio-items:hover .portfolio-photo-text-frame {
   transform: translateY(0);
 }
-.portfolio-photo-text{
+.portfolio-photo-text {
   margin: 0;
 }
 .portfolio-items-photo {
