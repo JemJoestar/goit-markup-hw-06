@@ -446,7 +446,7 @@
           </p>
           <div>
             <!-- ^ Name -->
-            <label for="modal-form-name"
+            <label class="modal-form-input-title" for="modal-form-name"
               ><span class="modal-input-title">Name</span></label
             >
             <div class="modal-form-input-box">
@@ -461,7 +461,7 @@
               </svg>
             </div>
             <!-- ^ tel -->
-            <label for="modal-form-tel"
+            <label class="modal-form-input-title" for="modal-form-tel"
               ><span class="modal-input-title">Phone</span></label
             >
             <div class="modal-form-input-box">
@@ -476,7 +476,7 @@
               </svg>
             </div>
             <!-- ^ Email -->
-            <label for="modal-form-email"
+            <label class="modal-form-input-title" for="modal-form-email"
               ><span class="modal-input-title">Email</span></label
             >
             <div class="modal-form-input-box">
@@ -491,30 +491,34 @@
               </svg>
             </div>
             <!-- ^ Comment -->
-            <label for="modal-form-textarea"
+            <label class="modal-form-input-title" for="modal-form-textarea"
               ><span class="modal-input-title">Comment</span></label
             >
             <textarea
               class="block modal-form-text modal-form-textarea"
               name="modal-form-comment"
               id="modal-form-textarea"
-              
               rows="6"
               placeholder="Text input"
             ></textarea>
             <!-- ^ Privacy -->
-            <label for="modal-form-privacy">
+            <div class="modal-form-privacy-box">
               <input
                 class="modal-form-checkbox"
                 type="checkbox"
                 name="form_privacy"
                 id="modal-form-privacy"
               />
-              <span class="modal-privacy-conditions"
-                >I accept the terms and conditions of the
-                <a class="privacy-text" href="">Privacy Policy</a></span
-              ></label
-            >
+              <svg class="modal-checked" width="16" height="16">
+                <use href="./images/icon.svg#icon-checked"></use>
+              </svg>
+              <label class="modal-form-input-title modal-form-privacy" for="modal-form-privacy">
+                <span class="modal-privacy-conditions"
+                  >I accept the terms and conditions of the
+                  <a class="privacy-text" href="">Privacy Policy</a></span
+                >
+              </label>
+            </div>
             <!-- ^ Submit -->
             <button class="block modal-form-submit-btn" type="submit">
               Send
