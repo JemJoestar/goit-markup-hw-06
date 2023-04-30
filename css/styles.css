@@ -919,6 +919,11 @@ h6 {
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
   padding-left: 16px;
+  transition: border 250ms var(--primary-cubic-bezier);
+}
+.sub-text-input:focus{
+  border: 1px solid var(--primaty-brand-color);
+  outline: none;
 }
 .sub-text-input::placeholder {
   color: var(--primary-bg-color);
