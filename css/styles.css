@@ -537,7 +537,8 @@ h6 {
   background-color: var(--secondary-brand-color);
   border: none;
 }
-.modal-form-privacy:hover:not(:checked) .modal-checked {
+.modal-form-privacy:hover .modal-checked,
+.modal-form-privacy:focus .modal-checked {
   border: 1px solid #404bbf;
 }
 .modal-form-privacy {
@@ -558,7 +559,7 @@ h6 {
   transition: background-color 250ms var(--primary-cubic-bezier);
 }
 .modal-form-submit-btn:hover,
-.modal-form-submit-btn:hover {
+.modal-form-submit-btn:focus {
   background-color: #404bbf;
 }
 /**
@@ -937,6 +938,11 @@ h6 {
   color: var(--primary-bg-color);
   letter-spacing: 0.04em;
   border: none;
+  transition: background-color 250ms var(--primary-cubic-bezier);
+}
+.sub-btn:hover,
+.sub-btn:focus{
+  background-color: #404bbf;
 }
 .sub-icon {
   fill: var(--primary-bg-color);
