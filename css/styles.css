@@ -515,6 +515,8 @@ h6 {
   color: #8e8f99;
 }
 .modal-form-privacy-box {
+  display: flex;
+  align-content: center;
   position: relative;
   margin-bottom: 24px;
 }
@@ -523,7 +525,7 @@ h6 {
   display: inline-block;
   width: 16px;
   height: 16px;
-  top: 6px;
+  top: 0;
   left: 0;
   background-image: none;
   background-size: cover;
