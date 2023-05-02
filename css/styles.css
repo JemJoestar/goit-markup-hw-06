@@ -433,6 +433,7 @@ h6 {
   color: var(--main-title-color);
 }
 .modal-form-input-title {
+  display: block;
   margin-bottom: 4px;
   line-height: 1;
 }
@@ -546,6 +547,8 @@ h6 {
 }
 
 .modal-form-submit-btn {
+  cursor: pointer;
+  font-family: inherit;
   background-color: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   min-width: 169px;
@@ -935,6 +938,7 @@ h6 {
   padding: 8px 24px;
   gap: 16px;
   background: #4d5ae5;
+  font-family: inherit;
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
